@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lopata</title>
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./favi.ico" type="image/x-icon">
+</head>
+<body>
+
+  <header id="header" class="header">
+    <div class="container header__container">
+      <a class="header__link" href="index.html">
+        <img class="link__logo" src="./img/nav-logo.png" alt="Логотип Lopata">
+        <span class="link__name">CVMlopata</span>
+      </a>
+      <nav class="nav header__nav">
+        <ul class="nav__list list-reset">
+          <li class="nav__item">
+            <a href="#about" class="nav__link">
+              О нас
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#features" class="nav__link">
+              Услуги
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#contacts" class="nav__link">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="promo" class="promo">
+      <h1 class="hidden">
+        Компания CVMlopata
+      </h1>
+      <div class="container promo__container">
+        <h2 class="title promo__title">
+          CVM<span class="title__text">lopata</span>
+        </h2>
+        <p class="promo__text">
+          Делаем ваши рекламные компании более прибыльными и понятными!
+        </p>
+        <a href="#contacts" class="promo__btn">
+          СВЯЗАТЬСЯ С НАМИ
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container about__container">
+        <h2 class="title about__title">
+          О нас
+        </h2>
+        <p class="about__text">
+          Правильная организация проведения рекламных компаний довольно
+          сложная задача, включающая большой объем работы связанной с
+          математикой, data science, программированием и аналитикой.
+          Позволить себе отдел квалифицированных специалистов ,
+          может далеко не всякая компания, поэтому существуем мы.
+          Мы помогаем малому и среднему бизнесу строить современные и
+          надежные решения в области CVM.
+        </p>
+        <ul class="about__list list-reset">
+          <li class="about__item">
+            <h3 class="title about__item-title">
+              A/B тестирование
+            </h3>
+            <p class="about__item-text">
+              Поможем вашему бизнесу наладить цикл проведения и анализа
+              результатов A/B тестов.
+            </p>
+          </li>
+          <li class="about__item">
+            <h3 class="title about__item-title">
+              Стратификация
+            </h3>
+            <p class="about__item-text">
+              Мера увеличит качество проведения экспериментов и в последствии
+              поможет понять насколько удачно прошла ваша маркетинговая компания.
+            </p>
+          </li>
+          <li class="about__item">
+            <h3 class="title about__item-title">
+              Организация базы данных
+            </h3>
+            <p class="about__item-text">
+              У нас есть готовые структурные решения для большенства баз
+              данных, обеспечивающие стабильную работу CVM.
+            </p>
+          </li>
+          <li class="about__item">
+            <h3 class="title about__item-title">
+              Рекомендательные системы
+            </h3>
+            <p class="about__item-text">
+              Мы предлагаем качественные решения позволяющие рекомендовать
+              людям то, что они купят с большой точностью и полнотой.
+            </p>
+          </li>
+          <li class="about__item">
+            <h3 class="title about__item-title">
+              Автоматизация
+            </h3>
+            <p class="about__item-text">
+              Автоматизировав работу CVM вы избавитесь от ошибок ручного труда
+              и повысите качество взаимодействия c вашими клиентами.
+            </p>
+          </li>
+          <li class="about__item">
+            <h3 class="title about__item-title">
+              Администрирование и обучение
+            </h3>
+            <p class="about__item-text">
+              Если нужна помощь в обучении или администрировании - мы
+              готовы помочь!
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container">
+        <h2 class="title features__title">
+          Особенности
+        </h2>
+        <table class="table features__table">
+          <thead class="table__thead">
+            <tr>
+              <th>Было</th>
+              <th>Стало</th>
+            </tr>
+          </thead>
+          <tbody class="table__tbody">
+            <tr>
+              <td class="table__tbody-text">Текст</td>
+              <td class="table__tbody-text">Текст</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+      <div class="container contacts__container">
+        <h2 class="title contacts__title">
+          Связаться с нами
+        </h2>
+        <form id="form" class="form contacts__form">
+          <label class="form__label">
+            <input id="input-email" class="form__input" type="email" placeholder="Введите E-mail">
+          </label>
+          <label class="form__label">
+            <input id="input-phone" class="form__input" type="tel" placeholder="Введите номер телефона">
+          </label>
+          <label class="form__label">
+            <textarea id="textarea" class="form__textarea" placeholder="Введите текст"></textarea>
+          </label>
+          <button class="form__btn btn-reset">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container footer__container">
+      <p class="company-name">
+        <span class="copy">&copy;</span>
+        <span class="company-name-CVM">CVM</span>lopata
+      </p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
