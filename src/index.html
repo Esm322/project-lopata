@@ -153,20 +153,24 @@
 
     <section id="contacts" class="contacts">
       <div class="container contacts__container">
-        <h2 class="title contacts__title">
+        <h2 id="contact-title" class="title contacts__title">
           Связаться с нами
         </h2>
         <form id="form" class="form contacts__form">
-          <label class="form__label">
-            <input id="input-email" class="form__input" type="email" placeholder="Введите E-mail">
+          <div id="user-create-form-error-email" class="text-danger"></div>
+          <label id="label-input-email" class="form__label">
+            <input id="input-email" class="form__input" name="email" type="email" placeholder="Введите E-mail">
           </label>
-          <label class="form__label">
-            <input id="input-phone" class="form__input" type="tel" placeholder="Введите номер телефона">
+          <div id="user-create-form-error-phone" class="text-danger"></div>
+          <label id="label-input-phone" class="form__label label-input">
+            <input id="input-phone" class="form__input" name="phone" type="tel" placeholder="Введите номер телефона">
           </label>
-          <label class="form__label">
-            <textarea id="textarea" class="form__textarea" placeholder="Введите текст"></textarea>
+          <div id="user-create-form-error-textarea" class="text-danger"></div>
+          <label id="label-input-textarea" class="form__label">
+            <textarea id="textarea" class="form__textarea" name="textarea" placeholder="Введите текст"></textarea>
           </label>
-          <button class="form__btn btn-reset">
+          <button id="form-btn" class="form__btn btn-reset">
+            <span class="submit-spinner"></span>
             Отправить
           </button>
         </form>
