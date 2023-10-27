@@ -8,6 +8,8 @@ const formLabelPhone = document.getElementById('label-input-phone');
 const formLabelTextarea = document.getElementById('label-input-textarea');
 const inputPhone = document.getElementById('input-phone');
 const formBtn = document.getElementById('form-btn');
+const modal = document.getElementById('modal');
+const btnCLoseModal = document.getElementById('close-modal');
 
 async function postMessage(data) {
   const errors = [];
@@ -54,6 +56,7 @@ async function postMessage(data) {
   }).then(res => res.json())
 
   if (response.code === 200 || response.code === 201) {
+    openModal()
     return response.data;
   }
 
@@ -79,6 +82,32 @@ async function postMessage(data) {
 inputPhone.addEventListener('input', () => {
   inputPhone.value = inputPhone.value.replace(/[^0-9\+]/g, '')
 })
+
+function openModal() {
+  formBtn.addEventListener('click', () => {
+    modal.style.display = 'block';
+  })
+
+  btnCLoseModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+  })
+
+
+
+  window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+
+    if (!modal) {
+      document.body.style.overflow = null;
+      document.body.style.paddingRight = null;
+    } else {
+      document.body.style.paddingRight = window.innerWidth - document.documentElement.clientWidth + 'px';
+      document.body.style.overflow = 'hidden';
+    }
+  })
+}
 
 form.addEventListener('submit', async (el) => {
   el.preventDefault();
@@ -143,4 +172,3 @@ form.addEventListener('submit', async (el) => {
     formBtn.disabled = false;
   }
 })
-// formBtn.disabled = true;

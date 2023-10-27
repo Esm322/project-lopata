@@ -99,6 +99,7 @@ body {
 
 .header__container {
   display: flex;
+  justify-content: end;
   align-items: center;
 }
 
@@ -112,24 +113,17 @@ body {
   width: 58px;
 }
 
-.link__name {
-  padding-left: 10px;
-  font-weight: 700;
-  font-size: 64px;
-  color: #fff;
-}
-
-.header__nav .nav__item:not(:last-child) {
-  margin-right: 70px;
-}
-
 .nav__list {
   display: flex;
 }
 
 .nav__item {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
+}
+
+.header__nav .nav__item:not(:last-child) {
+  margin-right: 70px;
 }
 
 .nav__link {
@@ -153,7 +147,7 @@ body {
 
 .promo__title {
   margin-bottom: 10px;
-  font-size: 98px;
+  font-size: 68px;
   text-align: center;
   color: rgb(7, 79, 102);
 }
@@ -265,18 +259,25 @@ body {
 }
 
 .features__table {
-  width: 100%;
-  border-collapse: collapse;
+  margin: auto;
+  width: 80%;
+  border-spacing: 10px 0;
   text-align: center;
 }
 
 .table__tbody-text {
   padding: 20px 0;
+  color: #17baef;
+}
+
+th {
+  padding: 0;
 }
 
 td {
-  border-top: 1px solid #074f66;
-  border-bottom: 1px solid #074f66;
+  width: 50%;
+  border-radius: 15px;
+  background-color: #053747;
 }
 
 /* ----------- */
@@ -387,14 +388,6 @@ td {
 
 .company-name {
   margin: 0;
-  color: #eebf3f;
-}
-
-.company-name-CVM {
-  color: #074f66;
-}
-
-.copy {
   color: #fff;
 }
 
@@ -443,3 +436,63 @@ td {
 .submit-spinner_hide {
   display: none;
 }
+
+/* modal */
+
+.btn-modal {
+  display: block;
+  margin: 20% auto;
+  padding: 15px 15px;
+  background: transparent;
+  border: 1px solid #278158;
+  color: #278158;
+  cursor: pointer;
+  transition: background .3s ease-in, color .3s ease-in;
+}
+
+.btn-modal:hover {
+  background: #278158;
+  color: #fff;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1111;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.modal-content {
+  position: relative;
+  margin: 40vh auto;
+  padding: 30px;
+  width: 450px;
+  border-radius: 15px;
+  background-color: #17baef;
+  color: #074f66;
+}
+
+.modal-text {
+  margin: 0;
+  text-align: center;
+}
+
+.modal-success {
+  margin-bottom: 15px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* ----------- */

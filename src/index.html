@@ -12,10 +12,9 @@
 
   <header id="header" class="header">
     <div class="container header__container">
-      <a class="header__link" href="index.html">
+      <!-- <a class="header__link" href="index.html">
         <img class="link__logo" src="./img/nav-logo.png" alt="Логотип Lopata">
-        <span class="link__name">CVMlopata</span>
-      </a>
+      </a> -->
       <nav class="nav header__nav">
         <ul class="nav__list list-reset">
           <li class="nav__item">
@@ -45,6 +44,7 @@
       </h1>
       <div class="container promo__container">
         <h2 class="title promo__title">
+          <img class="link__logo" src="./img/nav-logo.png" alt="Логотип Lopata">
           CVM<span class="title__text">lopata</span>
         </h2>
         <p class="promo__text">
@@ -175,14 +175,22 @@
           </button>
         </form>
       </div>
+      <div id="modal" class="modal">
+        <div id="modal-content" class="modal-content">
+          <span id="close-modal" class="close-modal">
+            &#10006
+          </span>
+          <p class="modal-text modal-success">Сообщение успешно отправлено.</p>
+          <p class="modal-text">В скором времени с вами свяжемся...</p>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer id="footer" class="footer">
     <div class="container footer__container">
       <p class="company-name">
-        <span class="copy">&copy;</span>
-        <span class="company-name-CVM">CVM</span>lopata
+        &copy;CVMlopata
       </p>
     </div>
   </footer>
